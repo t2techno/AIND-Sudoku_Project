@@ -183,7 +183,7 @@ def search(values):
         return values
 
     # Get the box with smallest num of possibilities
-    nums,s = min((values[box],box) for box in boxes if len(values[box]) > 1)
+    nums,s = min((len(values[box]),box) for box in boxes if len(values[box]) > 1)
 
     for num in nums:
         # Create new board with same values
